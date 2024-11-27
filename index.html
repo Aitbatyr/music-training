@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Virtual Piano</title>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <!-- Блок для графика -->
+    <div style="text-align: center; margin-bottom: 20px;">
+        <canvas id="stats-chart" width="400" height="200"></canvas>
+    </div>
+
+    <!-- Блок счетчиков -->
+    <div class="counters">
+        <p>Правильных попыток: <span id="correct-count">0</span></p>
+        <p>Неправильных попыток: <span id="incorrect-count">0</span></p>
+    </div>
+
+    <!-- Кнопка воспроизведения -->
+    <div style="text-align: center; margin-bottom: 20px;">
+        <button id="play-random-note">Воспроизводить</button>
+    </div>
+
+    <!-- Пианино -->
+    <div class="piano">
+        <div class="key white" data-note="C"></div>
+        <div class="key black" data-note="Cs" style="left: 40px;"></div>
+        <div class="key white" data-note="D"></div>
+        <div class="key black" data-note="Ds" style="left: 100px;"></div>
+        <div class="key white" data-note="E"></div>
+        <div class="key white" data-note="F"></div>
+        <div class="key black" data-note="Fs" style="left: 220px;"></div>
+        <div class="key white" data-note="G"></div>
+        <div class="key black" data-note="Gs" style="left: 280px;"></div>
+        <div class="key white" data-note="A"></div>
+        <div class="key black" data-note="As" style="left: 340px;"></div>
+        <div class="key white" data-note="B"></div>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <script src="script.js"></script>
+</body>
+</html>

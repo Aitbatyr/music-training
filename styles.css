@@ -1,0 +1,129 @@
+body {
+    font-family: 'Roboto', sans-serif;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+    background: linear-gradient(to bottom, #f0f4f8, #ffffff);
+    margin: 0;
+    position: relative;
+}
+
+button {
+    padding: 12px 24px;
+    font-size: 16px;
+    cursor: pointer;
+    margin-bottom: 20px;
+    background-color: #4CAF50;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    transition: background-color 0.3s, transform 0.3s;
+}
+
+button:hover {
+    background-color: #45a049;
+    transform: translateY(-2px);
+}
+
+button:active {
+    transform: translateY(2px);
+}
+
+.piano {
+    display: flex;
+    position: relative;
+    margin-top: 20px;
+    border: 2px solid #ddd;
+    border-radius: 8px;
+    padding: 10px;
+    background-color: white;
+}
+
+.key {
+    width: 60px;
+    height: 200px;
+    border: 1px solid #333;
+    margin: 0;
+    cursor: pointer;
+    position: relative;
+    transition: background-color 0.1s;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.white {
+    background-color: white;
+    z-index: 1;
+}
+
+.black {
+    background-color: black;
+    width: 40px;
+    height: 120px;
+    position: absolute;
+    z-index: 2;
+}
+
+[data-note="Cs"] {
+    left: 42px; /* Скорректировано для центрирования Cs */
+}
+
+[data-note="Ds"] {
+    left: 102px; /* Скорректировано для центрирования Ds */
+}
+
+[data-note="Fs"] {
+    left: 222px; /* Скорректировано для центрирования Fs */
+}
+
+[data-note="Gs"] {
+    left: 282px; /* Скорректировано для центрирования Gs */
+}
+
+[data-note="As"] {
+    left: 342px; /* Скорректировано для центрирования As */
+}
+
+.key.pressed {
+    background-color: yellow;
+}
+
+.correct {
+    background-color: green !important;
+}
+
+.incorrect {
+    background-color: red !important;
+}
+
+.counters {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    font-size: 16px;
+    background-color: white;
+    padding: 10px;
+    border: 1px solid #333;
+    border-radius: 5px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+#stats-chart {
+    margin-bottom: 20px;
+    width: 400px;
+    height: 200px;
+    border-radius: 5px;
+}
+
+.chartjs-legend li {
+    display: flex;
+    align-items: center;
+    margin-bottom: 5px;
+}
+
+.chartjs-legend li span {
+    font-size: 14px;
+    padding-left: 5px;
+}
